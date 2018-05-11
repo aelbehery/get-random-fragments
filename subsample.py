@@ -8,7 +8,7 @@ first_record = SeqIO.parse(sys.argv[1], "fasta").next()
 genome = "_".join(first_record.description.split("_")[:-1])
 records = [first_record]
 for record in SeqIO.parse(sys.argv[1], "fasta"):
-    if "_".join(record.description.split("_")[:-1]) == genome:
+    if "_".join(record.description.split("_")[:-1]) == genome and "N" not in record.seq:
         records.append(record)
     else:
         selected.append(random.choice(records))
