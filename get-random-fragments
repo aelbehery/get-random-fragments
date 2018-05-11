@@ -8,9 +8,9 @@ REMOVE=
 usage()
 {
 echo "
-Description: $0 is a pipeline that shreds sequences using shred.sh from BBtools and randomly selects one fragment for each sequence
+Description: ${0##*/} is a pipeline that shreds sequences using shred.sh from BBtools and randomly selects one fragment for each sequence
 
-Usage: [$0 <-f fasta> [-l length] [-m minimum length] [-o overlap] [-r]  | [-h]]
+Usage: [${0##*/} <-f fasta> [-l length] [-m minimum length] [-o overlap] [-r]  | [-h]]
 -f | --fasta            Input fasta file
 -l | --length           Fragment length ; default = 500
 -m | --minlength        Minimum fragment length. The last fragment of each input sequence may be shorter than desired length. Default = 500
